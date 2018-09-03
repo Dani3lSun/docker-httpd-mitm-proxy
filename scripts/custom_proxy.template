@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+  DocumentRoot "/usr/local/apache2/htdocs"
+  ServerName #SERVER_NAME#
+  ErrorLog "logs/custom_proxy-error_log"
+  CustomLog "logs/custom_proxy-access_log" common
+  <IfModule proxy_http_module>
+    SSLProxyEngine on
+    SSLProxyVerify none
+    SSLProxyCheckPeerCN off
+    SSLProxyCheckPeerName off
+    ProxyPreserveHost Off
+    ProxyRequests Off
+    ProxyPass / #PROXY_URL#
+    ProxyPassReverse / #PROXY_URL#
+  </IfModule>
+</VirtualHost>
