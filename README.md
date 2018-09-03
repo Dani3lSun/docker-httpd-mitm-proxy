@@ -12,7 +12,7 @@ https://github.com/Dani3lSun/docker-httpd-mitm-proxy.git
 
 ```
 cd /path/to/docker-httpd-mitm-proxy
-docker httpd-mitm-proxy .
+docker build -t httpd-mitm-proxy .
 ```
 
 # Run Docker container
@@ -32,6 +32,7 @@ All custom server names must be specified either in your local hosts file or in 
 ```
 
 After that your are able to call e.g *https://example.com/* by entering *http://example.localdomain:8080/*
+
 All HTTP methods such as GET, POST, PUT, etc. are supported...
 
 ## License
