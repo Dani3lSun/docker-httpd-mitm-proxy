@@ -24,7 +24,7 @@ docker run -dit --name httpd-mitm-proxy -p 8080:80 \
 -e SERVER_NAME3='twitter.localdomain' -e PROXY_URL3='https://twitter.com/' httpd-mitm-proxy
 ```
 
-You can add up to 20 custom domains, each domain must have a SERVER_NAME (SERVER_NAME1 - SERVER_NAME20) and an associated PROXY_URL (PROXY_URL1 - PROXY_URL20).
+You can add up to 50 custom domains, each domain must have a SERVER_NAME (SERVER_NAME1 - SERVER_NAME50) and an associated PROXY_URL (PROXY_URL1 - PROXY_URL50).
 All custom server names must be specified either in your local hosts file or in your DNS server configuration, e.g.
 
 ```
